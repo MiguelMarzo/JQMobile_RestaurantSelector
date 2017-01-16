@@ -1,27 +1,28 @@
-<!DOCTYPE html>
+ï»¿<!DOCTYPE html>
 <html>
     <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
     <!--
         Personalice la directiva de seguridad de contenido en la etiqueta meta como sea necesario. Agregue "unsafe-inline" a default-src para permitir JavaScript insertado.
-        Para obtener más detalles, consulte http://go.microsoft.com/fwlink/?LinkID=617521
-    -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
-        
-        <meta name="format-detection" content="telephone=no">
-        <meta name="msapplication-tap-highlight" content="no">
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        Para obtener mÃ¡s detalles, consulte http://go.microsoft.com/fwlink/?LinkID=617521
+    -->   
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
         <link rel="stylesheet" type="text/css" href="css/index.css">
         <title>SelectorRestaurantes</title>
     </head>
     <body>
-        <div class="app">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Conectando con el dispositivo</p>
-                <p class="event received">El dispositivo está preparado</p>
-            </div>
-        </div>
+        <img height="20%" width="50%" style="margin-top: 10%; margin-left: 25%;" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTzVCX8-IGOMVVGjHu703dDUbD6f1WL3luCD0M1xJn16UC9y8-V" />
+        <h1>Â¿Que quieres comer hoy?</h1>
+        <br />
+        <ul data-role="listview">
+            <li><a href="#"><img class="ui-li-icon" src="https://img-global.cpcdn.com/002_recipes/1955079_ab6abfa49dd48c92/1200x630cq70/photo.jpg" />Arroz 3 Delicias</a></li>
+            <li><a href="#"><img class="ui-li-icon" src="http://us.123rf.com/450wm/bronipoezd/bronipoezd1510/bronipoezd151000109/47413695-de-dibujos-animados-doble-hamburguesa-grande.jpg?ver=6" />Burger doble</a></li>
+            <li><a href="#"><img class="ui-li-icon" src="http://www.dominospizza.es/images/Barbacoa.png" />Pizza barbacoa</a></li>
+        </ul>
+        
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="scripts/platformOverrides.js"></script>
         <script type="text/javascript" src="scripts/index.js"></script>
