@@ -1,45 +1,134 @@
 ﻿<!DOCTYPE html>
 <html>
-    <head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
     <!--
         Personalice la directiva de seguridad de contenido en la etiqueta meta como sea necesario. Agregue "unsafe-inline" a default-src para permitir JavaScript insertado.
         Para obtener más detalles, consulte http://go.microsoft.com/fwlink/?LinkID=617521
-    -->   
-        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
-        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    -->
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.2.0/jquery.rateyo.min.css">
 
-        <link rel="stylesheet" type="text/css" href="css/index.css">
-        <title>SelectorRestaurantes</title>
-    </head>
-    <body>
-        <div id="page1" data-role="page">
-            <img height="20%" width="50%" style="margin-top: 10%; margin-left: 25%;" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTzVCX8-IGOMVVGjHu703dDUbD6f1WL3luCD0M1xJn16UC9y8-V" />
-            <h1>¿Que quieres comer hoy?</h1>
-            <br />
-            <ul data-role="listview">
-                <li><a href="#page2"><img class="ui-li-icon" src="https://img-global.cpcdn.com/002_recipes/1955079_ab6abfa49dd48c92/1200x630cq70/photo.jpg" />Arroz 3 Delicias</a></li>
-                <li><a href="#page2"><img class="ui-li-icon" src="http://us.123rf.com/450wm/bronipoezd/bronipoezd1510/bronipoezd151000109/47413695-de-dibujos-animados-doble-hamburguesa-grande.jpg?ver=6" />Burger doble</a></li>
-                <li><a href="#page2"><img class="ui-li-icon" src="http://www.dominospizza.es/images/Barbacoa.png" />Pizza barbacoa</a></li>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <title>SelectorRestaurantes</title>
+</head>
+<body>
+    <div id="page1" data-role="page">
+        <img height="20%" width="50%" style="margin-top: 10%; margin-left: 25%;" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTzVCX8-IGOMVVGjHu703dDUbD6f1WL3luCD0M1xJn16UC9y8-V" />
+        <h1 id="titulo">¿Que quieres comer hoy?</h1>
+        <br />
+        <ul data-role="listview">
+            <li><a href="#page2"><img class="ui-li-icon" src="https://img-global.cpcdn.com/002_recipes/1955079_ab6abfa49dd48c92/1200x630cq70/photo.jpg" />Arroz 3 Delicias</a></li>
+            <li><a href="#page2"><img class="ui-li-icon" src="http://us.123rf.com/450wm/bronipoezd/bronipoezd1510/bronipoezd151000109/47413695-de-dibujos-animados-doble-hamburguesa-grande.jpg?ver=6" />Burger doble</a></li>
+            <li><a href="#page2"><img class="ui-li-icon" src="http://www.dominospizza.es/images/Barbacoa.png" />Pizza barbacoa</a></li>
+        </ul>
+    </div>
+
+    <div id="page2" data-role="page">
+        <div data-role="header">
+            <a data-rel="back">Back</a>
+            <h1>Selector Restaurantes</h1>
+        </div>
+        <div data-role="content">
+            <form id="myform" action="procesadorFormulario.php" method="post">
+                <div data-role="fieldcontain">
+                    <label for="search-restaurants">Selecciona ciudad:</label>
+                    <input type="search" name="search-restaurants" id="searchrestaurants" />
+                </div>
+            </form>
+            <ul data-role="listview" data-dividertheme="d" style="margin-top: 0;">
+                <li><a href="#page3">Pamplona<span class="ui-li-count">2</span></a></li>
+                <li><a href="#page3">Logroño<span class="ui-li-count">1</span></a></li>
+                <li><a href="#page3">Zaragoza<span class="ui-li-count">5</span></a></li>
             </ul>
         </div>
-       
-        <div id="page2" data-role="page">
-            <header data-role="header">
-                <a data-rel="back">Back</a>
-                <h1>Selector Restaurantes</h1>
-            </header>
+    </div>
 
-            <content data-role="content">
-
-            </content>
-
-
+    <div id="page3" data-role="page">
+        <div data-role="header">
+            <a data-rel="back">Back</a>
+            <h1>Selector Restaurantes</h1>
         </div>
-        
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="scripts/platformOverrides.js"></script>
-        <script type="text/javascript" src="scripts/index.js"></script>
-    </body>
+        <div data-role="content">
+            <form id="myform" action="procesadorFormulario.php" method="post">
+                <div data-role="fieldcontain">
+                    <label for="search-restaurants">Seleciona restaurante:</label>
+                    <input type="search" name="search-restaurants" id="searchrestaurants" />
+                </div>
+            </form>
+            <ul data-role="listview" data-dividertheme="d" style="margin-top: 0;">
+                <li><a href="#page4"><img class="ui-li-icon" src="https://goo.gl/YXpCjT" />La Runa<div id="rateRuna"></div> </a></li>
+                <li><a href="#page4"><img class="ui-li-icon" src="https://goo.gl/YXpCjT" />Omelett <div id="rateOmelett"></div></a></li>
+                <li><a href="#page4"><img class="ui-li-icon" src="https://goo.gl/YXpCjT" />La Tagliatella <div id="rateTaglia"></div></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="page4" data-role="page">
+        <div data-role="header">
+            <a data-rel="back">Back</a>
+            <h1>Selector Restaurantes</h1>
+        </div>
+        <div data-role="content">
+            <table>
+                <tr>
+                    <td>
+                        <h1>Nombre</h1>
+                        <p>Descripción</p>
+                    </td>
+                    <td>
+                        <img id="imgRestaurante" src="https://goo.gl/YXpCjT" /> 
+                        <input type="submit" value="Visita nuestra web" data-inline="true">                       
+                    </td>
+                </tr>
+            </table>
+            <hr />
+            <table>
+                <tr>
+                    <td>
+                        <h1>Contacto</h1>
+                        <p>Correo</p>
+                    </td>
+                    <td>
+                        <img id="imgRestaurante" src="https://goo.gl/YXpCjT" />
+                        <a href=""></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h1>Puntuanos</h1>
+                        <div id="rateRestaurante"></div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.2.0/jquery.rateyo.min.js"></script>
+    <script>rateRestaurante
+        $("#rateRestaurante").rateYo({
+            rating: 0, fullStar: true, multiColor: {
+                "startColor": "#FF0000", //RED
+                "endColor": "#00FF00"  //GREEN
+            }
+        });
+        $("#rateRuna").rateYo({
+            rating: 0, fullStar: true, multiColor: {
+                "startColor": "#FF0000", //RED
+                "endColor": "#00FF00"  //GREEN
+            }
+        });
+        $("#rateOmelett").rateYo({
+            rating: 2.5, fullStar: true
+        });
+        $("#rateTaglia").rateYo({
+            rating: 5, fullStar: true
+        });
+    </script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+    <script type="text/javascript" src="scripts/index.js"></script>
+</body>
 </html>
