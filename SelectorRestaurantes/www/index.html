@@ -32,13 +32,10 @@
             <h1>Selector Restaurantes</h1>
         </div>
         <div data-role="content">
-            <form id="myform" action="procesadorFormulario.php" method="post">
-                <div data-role="fieldcontain">
-                    <label for="search-restaurants">Selecciona ciudad:</label>
-                    <input type="search" name="search-restaurants" id="searchrestaurants" />
-                </div>
+            <form class="ui-filterable">
+                <input id="filterBasic-input" data-type="search">
             </form>
-            <ul data-role="listview" data-dividertheme="d" style="margin-top: 0;">
+            <ul data-role="listview" data-filter="true" data-input="#filterBasic-input">
                 <li><a href="#page3">Pamplona<span class="ui-li-count">2</span></a></li>
                 <li><a href="#page3">Logroño<span class="ui-li-count">1</span></a></li>
                 <li><a href="#page3">Zaragoza<span class="ui-li-count">5</span></a></li>
@@ -52,13 +49,10 @@
             <h1>Selector Restaurantes</h1>
         </div>
         <div data-role="content">
-            <form id="myform" action="procesadorFormulario.php" method="post">
-                <div data-role="fieldcontain">
-                    <label for="search-restaurants">Seleciona restaurante:</label>
-                    <input type="search" name="search-restaurants" id="searchrestaurants" />
-                </div>
+            <form class="ui-filterable">
+                <input id="filterBasic-input" data-type="search">
             </form>
-            <ul data-role="listview" data-dividertheme="d" style="margin-top: 0;">
+            <ul data-role="listview" data-filter="true" data-input="#filterBasic-input">
                 <li><a href="#page4"><img class="ui-li-icon" src="https://goo.gl/YXpCjT" />La Runa<div id="rateRuna"></div> </a></li>
                 <li><a href="#page4"><img class="ui-li-icon" src="https://goo.gl/YXpCjT" />Omelett <div id="rateOmelett"></div></a></li>
                 <li><a href="#page4"><img class="ui-li-icon" src="https://goo.gl/YXpCjT" />La Tagliatella <div id="rateTaglia"></div></a></li>
@@ -80,7 +74,7 @@
                     </td>
                     <td>
                         <img id="imgRestaurante" src="https://goo.gl/YXpCjT" /> 
-                        <input type="submit" value="Visita nuestra web" data-inline="true">                       
+                        <input id="btnRestaurante" type="submit" value="Visita nuestra web" data-inline="true">                       
                     </td>
                 </tr>
             </table>
@@ -118,13 +112,13 @@
             rating: 0, fullStar: true, multiColor: {
                 "startColor": "#FF0000", //RED
                 "endColor": "#00FF00"  //GREEN
-            }
+            }, readOnly: true
         });
         $("#rateOmelett").rateYo({
-            rating: 2.5, fullStar: true
+            rating: 2.5, fullStar: true, readOnly: true
         });
         $("#rateTaglia").rateYo({
-            rating: 5, fullStar: true
+            rating: 5, fullStar: true, readOnly: true
         });
     </script>
     <script type="text/javascript" src="cordova.js"></script>
