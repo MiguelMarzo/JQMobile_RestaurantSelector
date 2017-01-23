@@ -62,42 +62,38 @@
             <h1>Selector Restaurantes</h1>
         </div>
         <div data-role="content">
-            <table>
-                <tr>
-                    <td>
-                        <h1>Nombre</h1>
-                        <p>Descripción</p>
-                    </td>
-                    <td>
-                        <img id="imgRestaurante" src="https://goo.gl/YXpCjT" /> 
-                        <input id="btnRestaurante" type="submit" value="Visita nuestra web" data-inline="true">                       
-                    </td>
-                </tr>
-            </table>
-            <hr />
-            <table>
-                <tr>
-                    <td>
-                        <h1>Contacto</h1>
-                        <a href="https://www.youtube.com/watch?v=KMU0tzLwhbE">Correo</a>
-                    </td>
-                    <td>
-                        <img id="imgRestaurante" src="https://goo.gl/YXpCjT" />
-                        
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <h1>Puntuanos</h1>
-                        <div id="rateRestaurante"></div>
-                    </td>
-                </tr>
-            </table>
+            <div class="ui-grid-a">
+                <div class="ui-block-a">
+                    <h1>Nombre</h1>
+                    <p>Descripción</p>
+                </div>
+                <div class="ui-block-b">
+                    <img id="imgRestaurante" src="https://goo.gl/YXpCjT" />
+                    <a id="btnRestaurante" data-role="button" data-inline="true">Visita nuestra web</a>
+                </div>
+            </div>
         </div>
-    </div>
+        <hr />
+        <div class="ui-grid-b">
+            <div class="ui-block-a">
+                <h1>Contacto</h1>
+                <a href="https://www.youtube.com/watch?v=KMU0tzLwhbE">Correo</a>
+            </div>
+            <div class="ui-block-b">
+                <img id="imgRestaurante" src="https://goo.gl/YXpCjT" />
+            </div>
+        </div>
+        <div class="ui-grid-c">
+            <div class="ui-block-a">
+                <h1>Puntuanos</h1>
+                <div id="rateRestaurante"></div>
+                </div>
+            </div>
+        </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.2.0/jquery.rateyo.min.js"></script>
-    <script>rateRestaurante
+    <script>
+        rateRestaurante
         $("#rateRestaurante").rateYo({
             rating: 0, fullStar: true, multiColor: {
                 "startColor": "#FF0000", //RED
